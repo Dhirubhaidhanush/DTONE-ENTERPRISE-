@@ -16,16 +16,25 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    await fetch(`http://${window.location.hostname}:5000/api/contact`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: form.fullName,
-        email: form.email,
-        phone: form.phone,
-        message: form.message,
-      }),
-    });
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.fullName,
+          email: form.email,
+          phone: form.phone,
+          message: form.message,
+        }),
+      });
+
+      const data = await res.json();
+      console.log("Response:", data);
+
+      alert("Message sent successfully");
+    } catch (err) {
+      console.error("Failed to send message", err);
+    }
 
     setForm({ fullName: "", email: "", phone: "", message: "" });
     alert("Message sent successfully");
