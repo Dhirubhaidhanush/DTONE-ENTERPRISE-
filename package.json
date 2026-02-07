@@ -5,8 +5,10 @@
   "license": "MIT",
   "scripts": {
     "dev": "tsx server/index.ts",
-    "build": "npx vite build",
-    "start": "tsx server/index.ts"
+    "dev:client": "vite",
+    "build": "vite build",
+    "start": "node dist/server/index.js",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
