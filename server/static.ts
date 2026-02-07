@@ -11,12 +11,14 @@ export function serveStatic(app: Express) {
     );
   }
 
+  // Serve static files
   app.use(express.static(distPath));
 
-  // SPA fallback (Express 5 compatible)
-  app.get("/*", (_req, res) => {
+  // ✅ Express 5 SAFE SPA fallback
+  app.use((req, res, next) => {
+    if (req.method !== "GET") return next();
+    if (req.path.startsWith("/api")) return next();
+
     res.sendFile(path.join(distPath, "index.html"));
   });
 }
-
-
