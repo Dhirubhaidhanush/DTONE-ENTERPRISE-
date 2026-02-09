@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-6">
               <Printer className="h-6 w-6 text-primary" />
-              <span className="font-display font-bold text-xl tracking-tight text-white">D TONE ENTERPRISES</span>
+              <span className="font-display font-bold text-xl tracking-tight text-white">MiCROTONE ENTERPRISES</span>
             </div>
             <p className="text-muted-foreground leading-relaxed mb-6">
               Providing top-tier printing solutions for modern businesses. Quality, speed, and reliability in every print.
@@ -26,7 +26,7 @@ export default function Footer() {
             </ul>
           </div>
 
-         
+
 
           <div>
             <h4 className="font-display  font-bold text-white mb-6">Contact</h4>
@@ -41,14 +41,14 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary" />
-                <span>svvtechnologies@gmail.com</span>
+                <span>microtoneofficial22@gmail.com</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-white/5 pt-8 text-center text-muted-foreground text-sm">
-          <p>&copy; {new Date().getFullYear()} SVVTechnologies. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} MiCROTONE ENTERPRISES. All rights reserved.</p>
         </div>
       </div>
     </footer>
