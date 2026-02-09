@@ -35,7 +35,7 @@ export default function ProductCard({ product, index = 0 }) {
           {[...Array(5)].map((_, i) => (
             <Star key={i} className="h-3 w-3 fill-current" />
           ))}
-          <span className="text-muted-foreground ml-1">(24)</span>
+          {/* <span className="text-muted-foreground ml-1">(24)</span> */}
         </div>
         
         <div className="text-xs font-medium text-primary mb-1 uppercase tracking-wider">
