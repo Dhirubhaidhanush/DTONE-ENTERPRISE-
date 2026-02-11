@@ -69,8 +69,8 @@ export default function Home() {
       <section className="py-20 bg-card/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">Shop by Category</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">Find exactly what you need for your printing setup. From hardware to supplies, we have it all.</p>
+            <h2 className="text-3xl md:text-4xl font-bold font-display mb-6">Shop by Category</h2>
+            <p className="text-muted-foreground  mx-auto">Find exactly what you need for your printing setup. From hardware to supplies, we have it all.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
