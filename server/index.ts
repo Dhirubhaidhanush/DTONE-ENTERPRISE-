@@ -9,6 +9,22 @@ const server = createServer(app);
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
+// SEO Sitemap Route
+app.get("/sitemap.xml", (req, res) => {
+  res.setHeader("Content-Type", "application/xml");
+
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.microtone.info/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>`;
+
+  res.status(200).send(sitemap);
+});
+
 
 (async () => {
   await registerRoutes(server, app);
